@@ -1,0 +1,6 @@
+{
+  "name": "AmalgamationOfCats",
+  "dependencies": {
+    "bootstrap": "twitter/bootstrap"
+  }
+}
