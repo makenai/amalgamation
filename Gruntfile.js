@@ -38,10 +38,6 @@ module.exports = function(grunt) {
       pages: {
         src: 'src/*.hbs',
         dest: 'site/'
-      },
-      projects: {
-        src: 'src/projects/*.hbs',
-        dest: 'site/projects/'
       }
     },
 

@@ -1,4 +1,11 @@
+---
+title: Project Index
+---
 <h3>More stuffs coming soon..</h3>
 <p id="apps">
-  <a class="btn btn-primary btn-lg" href="ZLathe">ZLathe</a></li>
+  {{#each pages}}
+    {{#isnt basename "index"}}
+      <a class="btn btn-primary btn-lg" href="{{this.filename}}">{{data.title}}</a>
+    {{/isnt}}
+  {{/each}}
 </p>
