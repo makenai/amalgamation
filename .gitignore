@@ -1,6 +1,8 @@
 node_modules
 npm-debug.log
 
+site/*.html
+
 tmp
 temp
 TODO.md

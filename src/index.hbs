@@ -3,9 +3,17 @@ title: Project Index
 ---
 <h3>More stuffs coming soon..</h3>
 <p id="apps">
+
+  <div class="row">
   {{#each pages}}
     {{#isnt basename "index"}}
-      <a class="btn btn-primary btn-lg" href="{{this.filename}}">{{data.title}}</a>
+      <div class="col-sm-6 col-md-3">
+      <a href="{{this.filename}}" class="thumbnail">
+        <img data-src="{{this.filename}}" src="{{data.image}}" alt="{{data.title}}">
+      </a>
+      </div>
     {{/isnt}}
   {{/each}}
+  </div>
+
 </p>

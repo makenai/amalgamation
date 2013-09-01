@@ -41,38 +41,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // Compile LESS to CSS
-    less: {
-      options: {
-        paths: '<%= vendor %>/bootstrap/less',
-        imports: {
-          reference: ['mixins.less', 'variables.less']
-        }
-      },
-      // Compile Bootstrap's LESS
-      bootstrap: {
-        src: [
-          '<%= vendor %>/bootstrap/less/bootstrap.less',
-          '<%= vendor %>/bootstrap/docs/assets/css/docs.css'
-        ],
-        dest: '<%= assemble.options.assets %>/bootstrap.css'
-      },
-      // Example for compiling a single component
-      alerts: {
-        src: '<%= vendor %>/bootstrap/less/alerts.less',
-        dest: '<%= assemble.options.assets %>/alerts.css'
-      },
-      // Example for compiling all components
-      components: {
-        options: {concat: false},
-        src: [
-          '<%= vendor %>/bootstrap/less/*.less',
-          '!<%= vendor %>/bootstrap/less/{variables,mixins,bootstrap}.less'
-        ],
-        dest: '<%= assemble.options.assets %>/components/'
-      }
-    },
-
     // Prettify test HTML pages from Assemble task.
     prettify: {
       options: {
@@ -99,7 +67,7 @@ module.exports = function(grunt) {
         tasks: ['jshint', 'nodeunit']
       },
       design: {
-        files: ['Gruntfile.js', '<%= less.options.paths %>/*.less', 'src/**/*.hbs'],
+        files: ['Gruntfile.js', 'src/**/*.hbs'],
         tasks: ['design']
       }
     }
@@ -107,7 +75,6 @@ module.exports = function(grunt) {
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('assemble-less');
   grunt.loadNpmTasks('grunt-prettify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -121,14 +88,13 @@ module.exports = function(grunt) {
     'prettify'
   ]);
 
-  // Build HTML, compile LESS and watch for changes.
+  // Build HTML, and watch for changes.
   // You must first run "bower install" or install
   // Bootstrap to the "vendor" directory before running
   // this command.
   grunt.registerTask('design', [
     'clean',
     'assemble',
-    'less:bootstrap',
     'watch:design'
   ]);
 };
