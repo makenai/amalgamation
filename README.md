@@ -1,11 +1,22 @@
-# AmalgamationOfCats
+# Amalgamation Of Cats Site
 
-> An amalgamation of cats.
+This is a site for showcasing collaborations of Amalgamation of Cats. It is built on [assemble](http://assemble.io/).
 
-To learn more about Assemble and registering custom helpers, visit [assemble.io/docs/custom-helpers](http://assemble.io/docs/Custom-Helpers.html).
+You'll need [grunt](http://gruntjs.com/) installed as a commandline tool.
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com).
+```
+npm install -g grunt-cli
+npm install
+```
+
+Then you can run..
+
+```
+grunt watch
+```
+
+..and edit the src/*.hbs to have the HTML generated automatically when you save.
+
 
 ## Release History
 _(Nothing yet)_
