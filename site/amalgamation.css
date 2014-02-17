@@ -1,0 +1,18 @@
+body {
+  background: url(images/paper_fibers.png);
+  font-family: 'EB Garamond', serif;
+  font-size: 24px;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Clicker Script', cursive;
+}
+
+#logo {
+  display: block;
+  text-indent: -9999px;
+  width: 382px;
+  height: 300px;
+  background: url(images/amalgamation2.png);
+  margin: 10px auto;
+}
